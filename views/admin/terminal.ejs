@@ -1,0 +1,82 @@
+<%- include('header')%>
+<%- include('nav')%>
+<body>
+<div id="terminal" class="page">
+    <div class="content">
+        <h1>The Sweater Terminal</h1>
+        <div class="grid">
+            <div>
+                <form action="api/sms" method="post">
+                    <h2>Sms</h2>
+                    <input required placeholder="message" name="message">
+                    <input required placeholder="number" name="number">
+                    <button type="submit">Text</button>
+                </form>
+                <form action="api/slack" method="post">
+                    <h2>Slack</h2>
+                    <input required placeholder="message" name="message">
+                    <button name="submit">Slack</button>
+                </form>
+                <form action="api/email" method="post">
+                    <h2>Email</h2>
+                    <input required placeholder="from" name="from">
+                    <input required placeholder="to" name="to">
+                    <input required placeholder="subject" name="subject">
+                    <input required placeholder="message" name="message">
+                    <button name="submit">Email</button>
+                </form>
+                <form id="create_link">
+                    <h2>Create Payment Portal</h2>
+                    <input required placeholder="name" name="name">
+                    <input required placeholder="subtotal" name="subtotal">
+                    <input required placeholder="tax" name="tax">
+                    <input required placeholder="shipping" name="shipping">
+                    <input required id="img" placeholder="img" name="img">
+                    <input style="opacity: 0; position: absolute; top: -1000px" type="text" value="" id="copy">
+                    <button name="submit">Create Link</button>
+                </form>
+            </div>
+            <div>
+            </div>
+            <div>
+                <form action="api/mockup" method="post">
+                    <h2>Mockup</h2>
+                    <input required placeholder="item" name="item">
+                    <input required placeholder="color" name="color">
+                    <input required placeholder="logo" name="logo">
+                    <input required placeholder="scale" name="scale">
+                    <input required placeholder="x" name="x">
+                    <input required placeholder="y" name="y">
+                    <div class="check">
+                        <input id="check" name="save" type="checkbox"/>
+                        <label for="check">Save?</label>
+                    </div>
+                    <button name="submit">Mockup</button>
+                </form>
+                <div style="margin-top: 500px;">
+                    <%- include('upload', {image: ''}) -%>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function copy() {
+        var copyText = document.getElementById("copy");
+        copyText.select();
+        document.execCommand("copy");
+        alert("Copied to Clipboard: " + copyText.value);
+    }
+    $('#create_link').submit(function(e){
+        e.preventDefault();
+        var perams = $(this).find(':input').serialize()
+        var link = 'https://thesweaterguys.com/PaymentPortal?'+perams;
+        $('#copy').val(link)
+        // window.alert("Make Some Money Guy: " + link);
+        copy()
+    }).find(':input').click(function(){
+        $('#img').val("https://thesweaterguys.com"+cartdata.logo);
+    })
+</script>
+<%- include('footer')%>

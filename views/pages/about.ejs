@@ -1,0 +1,154 @@
+<%- include('header') %>
+<%- include('nav') %>
+<div class="fullPage" id="about">
+    <div class="content" id="section0">
+        <h1>About Us</h1>
+        <h2>The Sweater Guys is a "Tech Company".</h2>
+        <p>
+            We are The Sweater Guys, a tech/manufacturing startup working from Montreal and consisting of young, focused, highly motivated, ultra-modest geniuses with unlimited energy and one work goal: automate everything. Like, EVERYTHING…
+            <br><br>
+        </p>
+        <h2>Check out our weekly web-series:</h2>
+        <iframe id="yt" allowtransparency="true" src="https://www.youtube.com/embed/videoseries?list=PLwIf5m1vDCXNz7fyNSgGgt6XchwFBpNz2&rel=0&autoplay=1&modestbranding=1&showinfo=1&rel=0&color=white" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h3>Every Monday at 12pm</h3>
+        <br><br>
+        <div class="three" id="dom">
+            <div class="BIO">
+                <h2>Dom</h2>
+                <div class="shortName">
+                    <h3>The Build-It Guy</h3>
+                </div>
+                <img width='100%' src="img/photos/dom.png">
+            </div>
+            <p>
+                Dom DeFelice aims to bring the custom garment printing process into the 21st century through IOT and Industry 4.0 software integration.
+                <br><br>
+                Dom was born in Great Barrington, Massachusetts to two incredibly hard-working and principled doctors. A few of his wide-reaching passions include baseball, grouse hunting, programming (Raspberry Pi life!), and the novels of Dan Brown.
+                <br><br>
+                Striking a balance has become second nature to Dom, between studying economics at McGill University, playing varsity baseball (with a batting average of 0.500, whew) and leading The Sweater Guys hardware development.
+            </p>
+            <p class="written-by">- Affectionately written by Ted Spare</p>
+        </div>
+        <div class="three" id="dex">
+            <div class="BIO">
+                <h2>Dexter</h2>
+                <div class="shortName">
+                    <h3>The Video Guy</h3>
+                </div>
+                <img width='100%' src="img/photos/dex.png">
+            </div>
+            <p>
+                Dexter Storey was born with the vision of an eagle, the spine of a whale, and the wings of an albatross.
+                <br><br>
+                His creative instinct and lack of regular sleep cycle allow his brain and body to concoct ideas that seem years ahead of their time, bringing his work and those he encounters to new levels of inspiration, focus, and determination.
+                <br><br>
+                His end goal is to use his mind-over-matter approach to upload his brain into a computer so he will never need to sleep (nor consume ridiculous amounts of coffee) again, focusing his being solely on The Sweater Guys, and finally giving the neighbors some peace and quiet.
+            </p>
+            <p class="written-by">- Affectionately written by Dom DeFelice</p>
+        </div>
+        <div class="three" id="ted">
+            <div class="BIO">
+                <h2>Ted</h2>
+                <div class="shortName">
+                    <h3>The Tech Guy</h3>
+                </div>
+                <img width='100%' src="img/photos/ted.png">
+            </div>
+            <p>
+                Ted is like the guy from <i>Rain Man</i> but with social skills, an ego-less genius, and a knack for numbers who can have interesting conversations (as long as they are encoded in binary).
+                <br><br>
+                He's wicked smart, has the intelligence and wisdom of an 80-year-old, but sleeps more than a newborn, and acts like one too.
+                <br><br>
+                On the topic of newborns, Ted is likely the kind of guy to immaculately conceive his first child out of linear actuators, step motors and advanced AI - making waves in the tech community as it cures cancer, nourishes the malnourished and saves the whales in its first beta alpha gamma.
+            </p>
+            <p class="written-by">- Written affectionately by Dexter Storey</p>
+        </div>
+    </div>
+</div>
+<style>
+    .BIO{
+        position: relative;
+    }
+    .BIO h2{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .shortName{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .fullPage{
+        padding-bottom: 100px;
+    }
+    .content h1{
+        color: white;
+        font-size: 15vw;
+        text-align: center;
+    }
+    .content h2{
+        text-align: center;
+        font-size: 4vw;
+        font-weight: bold;
+        color: white;
+        margin: 10px 0;
+        /*opacity: 0;*/
+    }
+    .content h3{
+        text-align: center;
+        font-size: 2vw;
+        font-weight: bold;
+        color: white;
+        margin: 10px 0;
+    }
+    .content p{
+        text-align: left;
+        font-size: 20px;
+        font-weight: lighter;
+        color: white;
+        margin: 10px 0;
+    }
+    #yt {
+        width: calc(100vw - 100px);
+        height: calc(60vw - 50px);
+    }
+    .three{
+        width: calc(100%/3);
+        float: left;
+        padding: 0 20px;
+    }
+    .three h2{
+        font-size: 6vw;
+    }
+    #ted, #dex{
+        border-left: 2px white solid;
+    }
+    .written-by{
+        font-size: 13px !important;
+        text-align: right !important;
+        opacity: 1;
+    }
+    iframe{
+        margin: 10px 0;
+    }
+    @media (max-width: 1000px){
+        .three{
+            width: 100%;
+            margin: 5px 0;
+            border-left: none !important;
+            padding: 20px 0;
+        }
+        #dom, #dex{
+            border-bottom: 2px white solid;
+        }
+        .three h2{
+            font-size: 18vw;
+        }
+        .three h3{
+            font-size: 8vw;
+        }
+    }
+</style>
+<%- include('footer') %>

@@ -1,0 +1,1018 @@
+{
+  "t-shirt": {
+    "S": {
+      "Kiwi": {
+        "val": "#909F56",
+        "stock": 1000
+      },
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Cardinal Red": {
+        "val": "#6D1C20",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Military Green": {
+        "val": "#5B5D48",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "M": {
+      "Kiwi": {
+        "val": "#909F56",
+        "stock": 1000
+      },
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Cardinal Red": {
+        "val": "#6D1C20",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Military Green": {
+        "val": "#5B5D48",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "L": {
+      "Kiwi": {
+        "val": "#909F56",
+        "stock": 1000
+      },
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Cardinal Red": {
+        "val": "#6D1C20",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Military Green": {
+        "val": "#5B5D48",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "XL": {
+      "Kiwi": {
+        "val": "#909F56",
+        "stock": 1000
+      },
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Cardinal Red": {
+        "val": "#6D1C20",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Military Green": {
+        "val": "#5B5D48",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    }
+  },
+  "quarter": {
+    "S": {
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "M": {
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "L": {
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "XL": {
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    }
+  },
+  "hoodie": {
+    "S": {
+      "Kiwi": {
+        "val": "#909F56",
+        "stock": 1000
+      },
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Cardinal Red": {
+        "val": "#6D1C20",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Military Green": {
+        "val": "#5B5D48",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "M": {
+      "Kiwi": {
+        "val": "#909F56",
+        "stock": 1000
+      },
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Cardinal Red": {
+        "val": "#6D1C20",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Military Green": {
+        "val": "#5B5D48",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "L": {
+      "Kiwi": {
+        "val": "#909F56",
+        "stock": 1000
+      },
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Cardinal Red": {
+        "val": "#6D1C20",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": -1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Military Green": {
+        "val": "#5B5D48",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "XL": {
+      "Kiwi": {
+        "val": "#909F56",
+        "stock": 1000
+      },
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Cardinal Red": {
+        "val": "#6D1C20",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Military Green": {
+        "val": "#5B5D48",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    }
+  },
+  "crew": {
+    "S": {
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "M": {
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "L": {
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    },
+    "XL": {
+      "Irish Green": {
+        "val": "#408F4D",
+        "stock": 1000
+      },
+      "Gold": {
+        "val": "#F1AC4B",
+        "stock": 1000
+      },
+      "Purple": {
+        "val": "#4B3168",
+        "stock": 1000
+      },
+      "Ash Grey": {
+        "val": "#DDDDDF",
+        "stock": 1000
+      },
+      "Light Pink": {
+        "val": "#F6CAD5",
+        "stock": 1000
+      },
+      "Royal": {
+        "val": "#466DA7",
+        "stock": 1000
+      },
+      "Sand": {
+        "val": "#DACDBA",
+        "stock": 1000
+      },
+      "Orange": {
+        "val": "#E96039",
+        "stock": 1000
+      },
+      "Forest Green": {
+        "val": "#243621",
+        "stock": 1000
+      },
+      "Dark Heather": {
+        "val": "#595B61",
+        "stock": 1000
+      },
+      "Black": {
+        "val": "#111111",
+        "stock": 1000
+      },
+      "Graphite Heather": {
+        "val": "#8E8F93",
+        "stock": 1000
+      },
+      "Navy": {
+        "val": "#0E101F",
+        "stock": 1000
+      },
+      "Safety Pink": {
+        "val": "#EC6D91",
+        "stock": 1000
+      },
+      "White": {
+        "val": "#FFFFFF",
+        "stock": 1000
+      },
+      "Safety Green": {
+        "val": "#DCEE4D",
+        "stock": 1000
+      },
+      "Red": {
+        "val": "#B5343B",
+        "stock": 1000
+      }
+    }
+  }
+}

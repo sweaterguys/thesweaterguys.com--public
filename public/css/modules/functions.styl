@@ -1,0 +1,51 @@
+//functions
+alpha(color, a)
+  if color == light
+    rgba(255, 255, 255, a)
+  else
+    rgba(0, 0, 0, a)
+size(width, height, padding, margin)
+  width width
+  height height
+  padding padding
+  margin margin
+pos(position, top, right, bottom, left, width, height)
+  position position
+  top top
+  right right
+  bottom bottom
+  left left
+  width width
+  height height
+font(font, color, size, weight, kerning, align)
+  font-family font
+  color color
+  font-size size
+  font-weight weight
+  letter-spacing kerning
+  text-align align
+gradient(x, y)
+  linear-gradient(x, y)
+  -webkit-gradient(linear, top left, bottom left, from(x), to(y))
+  -webkit-linear-gradient(x, y)
+boxSizing()
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+placehold(color)
+  ::-webkit-input-placeholder
+    color color
+  ::-moz-placeholder
+    color color
+  ::-ms-input-placeholder
+    color color
+  ::-moz-placeholder
+    color color
+animate(name, time, duration)
+  -webkit-animation name time ease duration
+  -moz-animation name time ease duration
+  animation name time ease duration
+// media breakpoints
+breakpoint(max, display)
+  @media (max-width max)
+    display display

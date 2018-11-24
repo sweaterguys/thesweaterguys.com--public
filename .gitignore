@@ -1,0 +1,9 @@
+/node_modules/
+.DS_Store
+/.idea/
+package-lock.json
+server.sh
+discount.json
+credentials.json
+.env
+.gitsecret/keys/random_seed

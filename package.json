@@ -1,0 +1,42 @@
+{
+  "name": "thesweaterguys.com",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon start",
+    "deploy": "chmod +x bash/deploy.sh && ./bash/deploy.sh",
+    "git": "chmod +x bash/git.sh && ./bash/git.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sweaterguys/thesweaterguys.com.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "auth": "file:api/auth",
+    "cart": "file:api/cart",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^6.1.0",
+    "ejs": "~2.5.7",
+    "email": "file:api/email",
+    "express": "~4.16.0",
+    "file-type": "^10.4.0",
+    "http-errors": "~1.6.2",
+    "mockup": "file:api/mockup",
+    "morgan": "~1.9.0",
+    "pay": "file:api/pay",
+    "read-chunk": "^3.0.0",
+    "ship": "file:api/ship",
+    "slack": "file:api/slack",
+    "sms": "file:api/sms",
+    "stock": "file:api/stock",
+    "stylus": "^0.54.5",
+    "upload": "file:api/upload",
+    "credentials": "file:private/credentials"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}

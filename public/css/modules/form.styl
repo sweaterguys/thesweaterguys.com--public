@@ -1,0 +1,218 @@
+#contact
+  overflow auto
+  // checkbox
+  .check
+    background-color alpha(dark, 0.2)
+    display block
+    overflow hidden
+    margin 2px 0
+  form
+    color white
+    text-align center
+  input, textarea
+    size(100%, 1em, 1em, 2px 0)
+    font(primary_font, light2, 20px, bold, normal, i)
+    background alpha(light, 0.1)
+    border 2px solid light
+    boxSizing()
+    margin-bottom 1em
+    &:focus
+      background-color selecting_color
+      outline none
+    &:valid
+      background-color selected_color
+  textarea
+    height 10em
+    resize: vertical;
+  label
+    margin 20px
+    font-size 20px
+    font-weight bold
+  #open:hover
+    background-color rgba(light,0.2)
+  #open
+    margin-top -10px
+    margin-bottom 8px
+  #close
+    outline none
+    background #ccc
+    color #ddd
+    cursor not-allowed
+  #open:focus ~ #close
+    cursor pointer
+input:read-only{
+  border: none !important;
+  background: none !important;
+  font-size: inherit !important;
+  width: 60px !important;
+}
+#checkout
+  h1, h2, h3
+    color dark
+  .circled
+    width: 1.5em;
+    height: 1.5em;
+    background: rgba(0,0,0,0.8);
+    text-align: center;
+    color white
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 1.5em;
+  .noPad
+      padding 0
+  .container
+    background-color #f2f2f2
+    padding 20px
+    border 1px solid lightgrey
+    border-radius 3px
+    width 100%
+    margin 10px 0
+    a
+      color #2196F3
+  table
+    border-collapse collapse
+    width 100%
+  tr
+    width 100%
+  th
+    padding 10px 0
+  td
+    width 50%
+  .deliveryOption
+    cursor pointer
+    padding 10px
+    td
+      width 33%
+      padding 20px
+      &:nth-child(2)
+        text-align center
+      &:nth-child(3)
+        text-align center
+  .borderBottom
+    border-bottom 1px solid rgba(0,0,0,0.2)
+  .shipSelect
+    color deepskyblue
+    background rgba(85,188,249,0.2)
+    border 2px solid deepskyblue
+  #checkInfo
+    margin 20px
+    p
+      padding 10px 0
+      color rgba(0,0,0,0.5)
+  .unavailable
+    color rgba(0,0,0,0.5)
+  #holdMyButton
+    text-align center
+    float left
+    width 100%
+    .btn
+      float left
+  .c75
+    float left
+    width calc(65% - 20px)
+    margin 0 10px
+  .c25
+    float left
+    width calc(35% - 20px)
+    margin 0 10px
+  .price
+    text-align right
+    color rgba(0,0,0,0.5)
+  #cart
+    td
+      padding 10px 0
+  input:not(.checkbox), select
+    width 100%
+    height 4em
+    margin 10px 0
+    padding 12px
+    border 1px solid #ccc
+    border-radius 3px
+  #open-modal
+    input
+      height 2.5em
+  .checkbox
+    padding 12px
+  hr
+    border 1px solid lightgrey
+  span.price
+    float right
+    color grey
+  @media (max-width 800px)
+    .row
+      flex-direction column-reverse
+    .col-25
+      margin-top 20px
+  @media (max-width:600px)
+    .c25, .c75
+      width calc(100% - 20px)
+#carter
+  select
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  .btn
+    width 50% !important
+    position relative
+    left 25%
+  h1, h2
+    margin 10px 30px
+    color black
+  hr
+    margin 0 30px
+  table
+    padding  30px
+    width 100%
+  input, select
+    font-size 15px
+    text-align center
+    text-align-last: center;
+    width 100%
+    height 3em
+    margin 10px 0
+    padding 12px
+    border none
+    background #EEE
+    border-radius 3px
+  input[type=number]
+    border 2px solid #EEE
+    background #FFF
+  th
+    padding-bottom 20px
+  td
+    padding 10px
+    width calc(100%/5)
+    text-align center
+  #reload, .delete
+    border none
+    background none
+    i
+      text-align right !important
+      font-size 20px
+      &:hover
+        color primary_color
+  #cartItems
+    width calc(100% - 60px)
+    margin 30px
+  #totals
+    color #444
+    width calc(100% - 60px)
+    margin 0 30px
+    border-top 2px solid #333
+    td
+      padding-right 0
+      width 100%
+      text-align right
+  @media (max-width:700px)
+    #lineItems
+      td:nth-child(2), td:nth-child(3), td:nth-child(4), th:nth-child(2), th:nth-child(3), th:nth-child(4)
+        display none
+      td
+        width 50%
+    .mobileHIDE
+      display none
+    #totals
+      td
+        text-align center
+        width 33%

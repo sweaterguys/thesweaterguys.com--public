@@ -1,0 +1,60 @@
+.item_grid
+  width 100%
+  height 110%
+  overflow hidden
+  margin-top 80px
+  & > div
+    width calc(100%/3)
+    height 50%
+    float left
+  & > div > div, & > div > div > div, & > div > div > div > div
+    float left
+  img, svg
+    transition all .2s ease-in-out
+    max-height 100%
+    max-width 110%
+    &:hover
+      transform: scale(1.1)
+  .oflowR img, .oflowL img, .oflowR_SPECIAL img
+    max-width 200%
+  .oflowL_SPECIAL img
+    max-width 110%
+  .oflowL img, .oflowL_SPECIAL img
+    float: right
+  .w6
+    width calc(100%/6*6)
+  .w5
+    width calc(100%/6*5)
+  .w4
+    width calc(100%/6*4)
+  .w3
+    width calc(100%/6*3)
+  .w2
+    width calc(100%/6*2)
+  .w1
+    width calc(100%/6*1)
+  .h6
+    height calc(100%/6*6)
+  .h5
+    height calc(100%/6*5)
+  .h4
+    height calc(100%/6*4)
+  .h3
+    height calc(100%/6*3)
+  .h2
+    height calc(100%/6*2)
+  .h1
+    height calc(100%/6*1)
+  /* ---- MOBILE GRID ---- */
+@media (max-width: 900px)
+  .item_grid
+    width 105vw
+    margin-left -5%
+  .item_grid > div
+    width 50%
+    height calc(100%/3)
+    float left
+  .oflowR img
+    float right
+  .oflowR_SPECIAL, .oflowL_SPECIAL
+    float left

@@ -1,0 +1,93 @@
+<%- include('header') %>
+<%- include('nav') %>
+<div class="fullPage" id="cartME">
+    <div class="content" id="section0">
+        <div id="cartItems">
+            <form id="carter" action="/cart" method="post">
+               <h1>Cart</h1>
+                <hr style="height:4px;border:none;color:#333;background-color:#333;" />
+                <h2>Order Summary</h2>
+                <hr style="height:2px;border:none;color:#333;background-color:#333;" />
+                <table id="lineItems">
+                    <tr>
+                        <th>Mockup</th>
+                        <th>Item</th>
+                        <th>Size</th>
+                        <th>Color</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                <% for (var i = 0; i < lineItems.length; i++) {%>
+                    <tr>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="<%= lineItems[i].svg['viewbox'] %>">
+                                <defs>
+                                    <style>#base<%=i%>{fill:<%= lineItems[i].svg['color'] %>;}</style>
+                                        <clipPath id="clipPath<%=i%>">
+                                            <path d='<%= lineItems[i].svg['base'] %>'></path>
+                                        </clipPath>
+                                </defs>
+                                <path id="base<%=i%>" d="<%= lineItems[i].svg['base'] %>"></path>
+                                <image class="logo" style="clip-path: url(#clipPath<%=i%>);" x="<%= lineItems[i].svg['x'] %>" y="<%= lineItems[i].svg['y'] %>" width="<%= lineItems[i].svg['width'] %>" height="<%= lineItems[i].svg['height'] %>" xlink:href="<%= lineItems[i].svg['logo'] %>"></image>
+                                <image width="<%= lineItems[i].svg['backWidth'] %>" height="<%= lineItems[i].svg['backHeight'] %>" xlink:href="<%= lineItems[i].svg['shadow'] %>"></image>
+                            </svg>
+                        </td>
+                        <td><select name="item" id="item<%=i%>">
+                                <option value="t-shirt">T Shirt</option>
+                                <option value="crew">Crew Neck</option>
+                                <option value="hoodie">Hoodie</option>
+                                <option value="quarter">Quarter Zip</option>
+                            </select></td>
+                        <td><select name="size" id="size<%=i%>">
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                            </select></td>
+                        <td><select name="color" class="color" id="color<%=i%>">
+                            <!--Filled By ~ code ~ (; -->
+                            </select></td>
+                        <td><input style="font-weight: bold" title="quantity" type="number" name="quantity" min="1" id="quantity<%=i%>"></td>
+                        <td><input title="price" type="number" name="price" id="price<%=i%>" readonly></td>
+                        <td><button class="delete" formaction="/cart/delete?delete=<%=i%>" action="POST"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                    <script>
+                        $('#item<%=i%>').val('<%= lineItems[i].product%>');
+                        $('#size<%=i%>').val('<%= lineItems[i].size%>');
+                        $.getJSON("../data/stock.json", function (json) {
+                            $.each(json['<%= lineItems[i].product%>']['<%= lineItems[i].size%>'], function (k, v) {
+                                $('#color<%=i%>')
+                                    .append($('<option>')
+                                    .text(k)
+                                    .attr('value', String(v.val)))
+                                    .val('<%= lineItems[i].color%>');
+                            });
+                        });
+                        $('#quantity<%=i%>').val(<%=lineItems[i].quantity%>);
+                        $('#price<%=i%>').val(<%=lineItems[i].price%>);
+                    </script>
+                <%}%>
+                </table>
+                <table id="totals">
+                    <tr>
+                        <td class="mobileHIDE" style="text-align: left;" colspan="4">Taxes and Shipping will be calculated at Checkout</td>
+                        <td><b>Subtotal</b></td>
+                        <td>$<%=subtotal%>.00</td>
+                        <input name="subtotal" value="<%=subtotal%>" hidden>
+                        <td><button id="reload" formaction="/cart/update" formmethod="post"><i class="fa fa-sync-alt"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td class="mobileHIDE" colspan="3"></td>
+                        <td colspan="4">Have a Discount Code?</td>
+                    </tr>
+                    <tr>
+                        <td class="mobileHIDE" style="text-align: left;" colspan="3"><i class="fa fa-file-invoice"></i> Terms of Service<br><br><i class="fa fa-book"></i> Privacy Policy</td>
+                        <td colspan="4"><input name="discountCode" title="discountCode" placeholder="Discount Code"></td>
+                    </tr>
+                </table>
+                <button type="submit" class="btn" id="checkMeout">Checkout</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('footer') %>

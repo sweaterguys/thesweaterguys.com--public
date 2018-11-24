@@ -1,0 +1,25 @@
+<%- include('header') %>
+<%- include('nav') %>
+<div class="fullPage" id="contact">
+    <div class="content">
+        <div class="pad">
+            <h1>Contact Us</h1>
+            <p>Got a question? Ask away! We'll get back to you in 20 seconds or more!</p>
+            <p class="mini">(if our AI is able to answer your question it will send you an email, otherwise, we need to wait for a human...)</p>
+        </div>
+        <form action="/contact" id="contact-form" name="contact-form" method="post" role="form">
+            <label for="name">Name &#42;</label>
+            <input id="name" name="from" type="text" placeholder="Your name" required="required">
+            <label for="email">Email &#42;</label>
+            <input id="email" name="email" type="text" placeholder="Your email" required="required">
+            <label for="subject">Email &#42;</label>
+            <input id="subject" name="subject" type="text" placeholder="Subject" required="required">
+            <input type="hidden" name="to" value="talk@thesweaterguys.com">
+            <label for="message">Message &#42;</label>
+            <textarea id="message" name="message" placeholder="Enter your message here" rows="10" required="required"></textarea>
+            <button id="open" class='btn'>Submit</button>
+            <button id="submit" style="visibility: hidden; height: 0;" type="submit"></button>
+        </form>
+    </div>
+</div>
+<%- include('footer') %>

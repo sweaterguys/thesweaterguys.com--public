@@ -1,0 +1,159 @@
+html
+  height 100%
+body
+  padding 0
+  margin 0
+  text-align center
+  font-family "Helvetica", sans-serif
+  background-image linear-gradient(#222, #000, #222)
+  color white
+canvas
+  width 100vw !important
+  height 100vh !important
+h1
+  font-size 100px
+  margin 10px
+h2
+  font-size 50px
+h3
+  font-size 20px
+  padding-right 5vw
+  padding-left 5vw
+input, select
+  outline none
+  -webkit-appearance none
+  -moz-appearance none
+  padding 20px
+  margin 10px
+  background transparent
+  font-size 40px
+  font-weight bold
+  color white
+  border 5px solid white
+  border-radius 5px
+input:hover, select:hover
+  background none
+  border 5px solid deepskyblue
+  color deepskyblue
+input:active
+  background dodgerblue
+  border 5px solid white
+  color white
+select
+  background transparent
+  text-align-last center
+  width 25vw
+option
+  text-align-last center
+.page
+  height 100vh
+.gold
+  color #c3a343
+  -webkit-text-fill-color transparent;
+  background -webkit-linear-gradient(transparent, transparent),
+  url(https://previews.123rf.com/images/naiaekky/naiaekky1503/naiaekky150300128/38508988-golden-texture-background.jpg) repeat
+  background -o-linear-gradient(transparent, transparent)
+  -webkit-background-clip text
+  background-position 0 0
+  -webkit-animation animatedBackground 10s linear infinite, fadeInLeft 2s linear
+  -moz-animation animatedBackground 10s linear infinite, fadeInLeft 2s linear
+  animation animatedBackground 10s linear infinite, fadeInLeft 2s linear
+  @-webkit-keyframes animatedBackground
+    from
+      background-position 0 0
+    to
+      background-position 100% 0
+  @keyframes fadeInLeft
+    0%
+      opacity 0
+      transform translateY(20px)
+    100%
+      opacity 1
+      transform translateY(0)
+  @keyframes fade
+    0%
+      opacity 0
+    50%
+      opacity 0
+    100%
+      opacity 0.5
+#loading
+  z-index 2
+  background-image linear-gradient(#222, #000, #222)
+  position fixed
+  width 100vw
+  height 100vh
+  top 0
+  h1
+    cursor pointer
+    font-size 10vw
+    margin 0
+    padding-top calc(50vh - 10vw)
+    font-family "Helvetica Neue"
+    font-weight lighter
+    margin-bottom -40px
+  button
+    color white !important
+    font-size 50px
+    font-weight bold
+    background none
+    width 20%
+    padding 10px
+    border 3px solid white
+    -webkit-animation fade 4s linear
+    -moz-animation fade 4s linear
+    animation fade 4s linear
+    opacity 0.5
+    &:hover
+      opacity 1
+#page1
+  padding-top calc(50vh - 150px)
+  z-index -1
+#page2
+  position fixed
+  z-index -1
+  top 0
+  left 0
+  right 0
+  bottom 0
+  padding 0
+  margin 0
+#starter
+  width 25vw
+  border-radius 5px
+  &:hover
+    color lime
+    border-color lime
+  &:active
+    background lime
+    border-color lime
+#stopper
+  width 25vw
+  border-radius 5px
+  &:hover
+    color red
+    border-color red
+  &:active
+    background red
+    border-color red
+@media(max-width 1000px)
+  input, select
+    width 100% !important
+    margin 10px 0
+  #page1
+    padding 30px
+  #page2
+    padding 30px
+  #page3
+    padding 50px
+#coinsEarned
+  float right
+  position fixed right
+  margin 20px
+  padding 20px
+  z-index 1
+  position -webkit-sticky
+  position sticky
+  top 0
+#about
+  margin 50px

@@ -1,0 +1,40 @@
+<%- include('header') %>
+<%- include('nav') %>
+<div class="fullpage">
+    <div class="content" id="section0">
+        <div id="payment_portal" class="page">
+            <div class="content">
+                <h1>Payment Portal</h1>
+                <h2>Welcome <%= name %>!</h2>
+                <p><%= description %></p>
+                <table class="crt">
+                    <tr><td colspan=2><img style="width: 100%;" src='<%= img %>'></td></tr>
+                    <tr><td>Sub-Total</td><td>$<%= subtotal %></td></tr>
+                    <tr><td>Tax</td><td><%= tax %>%</td></tr>
+                    <tr><td>Shipping</td><td>$<%= shipping %></td></tr>
+                    <tr><td colspan=2>_______________________________</td></tr>
+                    <tr><td>Total: $<%= total %></td></tr>
+                    <tr><td colspan=2><%- include('modal', {content: 'checkout', price: total}) %></td></tr>
+                </table>
+            </div>
+        </div>
+        <style>
+            *{
+                color: white;
+            }
+            .crt{
+                width: 25%;
+                position: absolute;
+                left: 37.5%;
+                font-size: 30px;
+            }
+            .crt td{
+                font-size: 20px;
+            }
+            .crt th{
+                text-align: center;
+            }
+        </style>
+    </div>
+</div>
+<%- include('footer') %>

@@ -1,0 +1,328 @@
+<%- include('header') %>
+<%- include('nav') %>
+<div class="fullPage">
+    <div class="content" id="section0 check">
+        <form id='checkout' action="/pay" method="POST">
+            <h1 style="text-align: center"><i class="fa fa-lock"></i> Secure Checkout</h1>
+            <h3 style="text-align: center">Verified by Bluepay</h3>
+            <div class="c75">
+                <div class="container">
+                    <h2 style='cursor: pointer;' id="deliverHead"><span class="circled">1</span> Delivery</h2>
+                    <div class="delivery">
+                        <table id="shipping">
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="email" name="shipping_email" placeholder="Email" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="fName" name="shipping_firstName" placeholder="First Name" required>
+                                </td>
+                                <td>
+                                    <input type="text" class="lName" name="shipping_lName" placeholder="Last Name" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="adr" name="shipping_address" placeholder="Address" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="adr2" name="shipping_address2" placeholder="Address 2 (optional)">
+                                </td>
+                                <td>
+                                    <input type="text" class="zip" name="shipping_zip" placeholder="Postal Code" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="city" name="shipping_city" placeholder="City" required>
+                                </td>
+                                <td>
+                                    <select title="province" class="province" name="shipping_province" required>
+                                        <option value="Alberta">Alberta</option>
+                                        <option value="British Columbia">British Columbia</option>
+                                        <option value="Manitoba">Manitoba</option>
+                                        <option value="New Brunswick">New Brunswick</option>
+                                        <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                                        <option value="Northwest Territories">Northwest Territories</option>
+                                        <option value="Nova Scotia">Nova Scotia</option>
+                                        <option value="Nunavut">Nunavut</option>
+                                        <option value="Ontario">Ontario</option>
+                                        <option value="Prince Edward Island">Prince Edward Island</option>
+                                        <option value="Quebec">Quebec</option>
+                                        <option value="Saskatchewan">Saskatchewan</option>
+                                        <option value="Yukon">Yukon</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="number" class="phone" name="shipping_phone" placeholder="Phone" required>
+                                </td>
+                                <td>
+                                    <select title="country" class="country" name="shipping_country" disabled>
+                                        <option value="Canada">Canada</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <select style="display: none;" title="shipping" id="shipping" name="shipping">
+                            <option value="free"></option>
+                            <option value="fast"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="delivery">
+                    <div class="container">
+                        <table>
+                        <tr>
+                            <th>Delivery Method</th>
+                            <th>Estimated Arrival</th>
+                            <th>Shipping Cost</th>
+                        </tr>
+                        <tr class="deliveryOption" id="free" onclick="delivery(0, 'free', this)">
+                            <td>Fast + Free</td>
+                            <td>7-10 business days</td>
+                            <td>FREE</td>
+                        </tr>
+                        <tr class="deliveryOption" id="rush" onclick="delivery(19.99, 'fast', this)">
+                            <td>Lightning Fast</td>
+                            <td>5-6 business days</td>
+                            <td>$19.99</td>
+                        </tr>
+                        <tr class="deliveryOption unavailable" id="drone">
+                            <td>Drone Shipping<br><span class="small">(Coming Soon)</span></td>
+                            <td>Same Day<br><span class="small">(Montreal Only)</span></td>
+                            <td>$49.99</td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>
+                <div class="container">
+                <h2><span class="circled">2</span> Billing</h2>
+                <div class="checkbox">
+                    <input class="checkbox" title="checkbox" type="checkbox" checked="checked" name="sameadr" onclick="showBilling(this)">
+                    <label for="sameadr">Shipping address same as billing</label>
+                </div>
+                <table id="billing" style="display: none;">
+                    <tr>
+                        <td colspan="2">
+                            <input type="text" class="billing_email" name="billing_email" placeholder="Email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="fName" name="billing_firstName" placeholder="First Name">
+                        </td>
+                        <td>
+                            <input type="text" class="lName" name="billing_lastName" placeholder="Last Name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="text" class="adr" name="billing_address" placeholder="Address">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="adr2" name="billing_address2" placeholder="Address 2 (optional)">
+                        </td>
+                        <td>
+                            <input type="text" class="zip" name="billing_zip" placeholder="Postal Code">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="city" name="billing_city" placeholder="City">
+                        </td>
+                        <td>
+                            <select title="province" class="province" name="billing_province">
+                                <option value="Alberta">Alberta</option>
+                                <option value="British Columbia">British Columbia</option>
+                                <option value="Manitoba">Manitoba</option>
+                                <option value="New Brunswick">New Brunswick</option>
+                                <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                                <option value="Northwest Territories">Northwest Territories</option>
+                                <option value="Nova Scotia">Nova Scotia</option>
+                                <option value="Nunavut">Nunavut</option>
+                                <option value="Ontario">Ontario</option>
+                                <option value="Prince Edward Island">Prince Edward Island</option>
+                                <option value="Quebec">Quebec</option>
+                                <option value="Saskatchewan">Saskatchewan</option>
+                                <option value="Yukon">Yukon</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" class="phone" name="billing_phone" placeholder="Phone">
+                        </td>
+                        <td>
+                            <select title="country" class="country" name="billing_country" disabled>
+                                <option value="Canada">Canada</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+                <div id="holdMyButton">
+                    <a href="#open-modal" class="btn">Continue</a>
+                </div>
+            </div>
+            <div class="c25">
+                <div class="container">
+                    <div id="cart">
+                        <h2>Cart <i class="fa fa-shopping-cart"></i> 4</h2>
+                        <table>
+
+                            <%if (typeof(lineItems.item) === 'string'){ %>
+                                    <tr>
+                                        <td><a href="/cart"><%=lineItems.item%> (<%=lineItems.quantity%>)</a></td>
+                                    <td class="price">$<%=lineItems.price%>.00</td>
+                                </tr>
+                            <%}%>
+                            <% if (typeof(lineItems.item) !== 'string' && lineItems.item){ for (var i = 0; i < lineItems.item.length; i++) {%>
+                                <tr>
+                                    <td><a href="/cart"><%=lineItems.item[i]%> (<%=lineItems.quantity[i]%>)</a></td>
+                                    <td class="price">$<%=lineItems.price[i]%>.00</td>
+                                </tr>
+                            <%} }%>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td class="price"><p>$<%=lineItems.subtotal%>.00</p></td>
+                            </tr>
+                            <tr>
+                                <td>Tax</td>
+                                <td class="price"><p><%=lineItems.taxRate%>%</p></td>
+                            </tr>
+                            <% if(lineItems.discount != 0){%>
+                            <tr>
+                                <td>Discount Code</td>
+                                <td class="price"><p>-<%=lineItems.discount%>%</p></td>
+                            </tr>
+                            <%}%>
+                            <tr class="borderBottom">
+                                <td>Shipping</td>
+                                <td class="price"><p id="shipHTML"></p></td>
+                            </tr>
+                            <tr>
+                                <td><b>Total</b></td>
+                                <td class="price"><b><p id="totalHTML"></p></b></td>
+                            </tr>
+                        </table>
+                        <input type="text" name="subtotal" id="subtotal" value="<%=lineItems.subtotal%>" hidden>
+                        <input type="text" name="discount" id="discount" value="<%=lineItems.discount%>" hidden>
+                        <input type="text" name="tax" id="tax" value="<%=lineItems.taxRate%>" hidden>
+                        <input type="text" name="shippingCost" id="ship" hidden>
+                        <input type="text" name="total" id="total" hidden>
+                    </div>
+                </div>
+                <div id="holdMyButton">
+                    <a href="#open-modal" class="btn">Continue</a>
+                </div>
+                <div id="checkInfo">
+                    <img src="icons/bluepay.svg">
+                    <p><i class="fa fa-lock"></i> Verified by Bluepay Payment Solutions</p>
+                    <p><i class="fa fa-book"></i> Read our Privacy Policy</p>
+                    <p><i class="fa fa-file-invoice"></i> Read our Terms of Service</p>
+                </div>
+            </div>
+        <div id="open-modal" class="modal-window">
+            <div>
+                <a href="#modal-close" title="Close" class="modal-close"><i class="fa fa-times-circle"></i></a>
+                <h1>The Sweater Guys</h1>
+                <p>Secured by Bluepay</p>
+                <div class="form-group" id="cardNumber">
+                    <input type="text" id="ccNum" name="ccNum" placeholder="Card Number" required>
+                    <i class="fa fa-check" style="display: none;" id="ccCheck"></i>
+                </div>
+                <div class="form-group">
+                    <input class="twofer" id="righter" type="text" placeholder="MM/YY" name="expire" required>
+                    <input class="twofer" type="text" id="cvv" name="cvv" placeholder="CVC" required>
+                    <i class="fa fa-check" style="display: none;" id="cvvCheck"></i>
+                </div>
+                <input type="submit" id="confirmPurchase" value="Pay">
+                <div class="form_group" id="card_icons">
+                    <i class="fab fa-cc-visa" style="color:navy;" id="visa"></i>
+                    <i class="fab fa-cc-amex" style="color:blue;" id="amex"></i>
+                    <i class="fab fa-cc-mastercard" style="color:red;" id="mastercard"></i>
+                    <i class="fab fa-cc-discover" style="color:orange;" id="discover"></i>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+<script src="js/jquery.payform.min.js"></script>
+<script>
+    $('document').ready(function(){
+        $('#free').click();
+    })
+    function validate(input, icon, type) {
+        if (type === 'cc') {
+            input.payform('formatCardNumber').keyup(function () {
+                if ($.payform.validateCardNumber(input.val()) === true) {
+                    input.css({'border': 'solid 2px deepskyblue'});
+                    $(icon).fadeIn('1s');
+                }
+                if ($.payform.parseCardType(input.val()) === 'visa') {
+                    $('.fa-cc-discover, .fa-cc-mastercard, .fa-cc-amex').css('opacity', '0.5');
+                    $('.fa-cc-visa').css('opacity', '1');
+                }
+                if ($.payform.parseCardType(input.val()) === 'amex') {
+                    $('.fa-cc-discover, .fa-cc-mastercard, .fa-cc-visa').css('opacity', '0.5');
+                    $('.fa-cc-amex').css('opacity', '1');
+                }
+                if ($.payform.parseCardType(input.val()) === 'discover') {
+                    $('.fa-cc-visa, .fa-cc-mastercard, .fa-cc-amex').css('opacity', '0.5');
+                    $('.fa-cc-discover').css('opacity', '1');
+                }
+                if ($.payform.parseCardType(input.val()) === 'mastercard') {
+                    $('.fa-cc-discover, .fa-cc-visa, .fa-cc-amex').css('opacity', '0.5');
+                    $('.fa-cc-mastercard').css('opacity', '1');
+                }
+            });
+        }
+        if (type === 'cvv') {
+            input.payform('formatCardCVC').keyup(function () {
+                if ($.payform.validateCardCVC(input.val()) === true) {
+                    input.css({'border': 'solid 2px deepskyblue'});
+                    $(icon).fadeIn('1s');
+                }
+            });
+        }
+    }
+    validate($('#ccNum'), $('#ccCheck'), "cc");
+    validate($('#cvv'), $('#cvvCheck'), "cvv");
+    function showBilling(box) {
+        if ($(box).is(":not(:checked)")) {
+            $('.delivery').fadeOut('0.1s', function(){
+                $('#billing').fadeIn('0.1s');
+            });
+        }
+        else{
+            $('.delivery').fadeIn('0.1s', function(){
+                $('#billing').fadeOut('0.1s');
+            });
+        }
+    }
+    function delivery(amount, type, me){
+        $('#delivery').val(type);
+        $('.deliveryOption').removeClass('shipSelect');
+        $(me).addClass('shipSelect');
+        $('#ship').val(amount)
+        $('#shipHTML').html('$' + amount)
+        let total = parseFloat((parseFloat($('#subtotal').val()) + amount)*(1 + $('#tax').val()/100)).toFixed(2)
+        total = parseFloat(total - total*$('#discount').val()/100).toFixed(2)
+        $('#total').val(total);
+        $('#totalHTML').html('$' + total);
+    }
+    $('#free').click();
+    $('#deliverHead').click(function(){
+        $('.delivery').fadeIn();
+    });
+</script>
+<%- include('footer') %>

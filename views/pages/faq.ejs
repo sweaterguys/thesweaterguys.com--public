@@ -1,0 +1,70 @@
+<%- include('header') %>
+<%- include('nav') %>
+<div id="static" class="fullPage">
+    <div class='content' id="section0">
+        <h1 id="test">FAQ</h1>
+        <h2>How long does delivery take?</h2>
+        <p>Delivery will take between 7-10 days after payment. We ship using Canada Post and you can track your order.</p>
+        <br><br>
+        <h2>Can we put images anywhere on the material?</h2>
+        <p>Yes! We want the image in your head to be the product you receive.</p>
+        <br><br>
+        <h2>How does the pricing work if I want customizations?</h2>
+        <p>We can do customizations anywhere you want on your sweater. For each customization, an additional $5 for sweaters and $2 for t-shirts is added to the cost.  For example, if you wanted a hoodie with a design on the front, your name on the sleeve, and a personal quote on the back, we would charge $35 for the hoodie with the front design and an additional $10 for two customizations (sleeve and back).</p>
+        <br><br>
+        <h2>Can we put images anywhere on the material?</h2>
+        <p>We order our sweaters from Gildan, a Canadian company that is committed to eco-friendly methods of manufacturing. More details on their perspective to environmental responsibility can be found <a href="http://www.gildancorp.com/en/conserving-the-environment">here.</a></p>
+        <br><br>
+        <h2>What do I do if I want to return a damaged item?</h2>
+        <p>If you have a problem with the finished product and would like to return it, please email one of your Sweater Guys and they will work with you on the return.</p>
+        <br><br>
+        <h2>Do any of your products shrink?</h2>
+        <p>Yes, Gildan products, as all knitted products, shrink. Upon first several washing and drying the fabric will almost always shrink back to its original density.  We recommend washing your Sweater on cold, and allow the sweater to air dry, or purchase a larger size.</p>
+        <br><br>
+        <h2>Is there a minimum purchase size?</h2>
+        <p>There is no minimum and shipping is always free.</p>
+        <br><br>
+        <h2>How does payment work?</h2>
+        <p>BluePay online provider/portal is incorporated in the design and ordering process.</p>
+        <br><br>
+    </div>
+</div>
+<style>
+    #static h1{
+        color: white;
+        font-size: 30vw;
+        text-align: center;
+    }
+    #static {
+        background: deepskyblue;
+    }
+    #static h2{
+        font-size: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        color: white;
+        /*opacity: 0;*/
+    }
+    #static p{
+        color: white;
+        font-size: 25px;
+        padding-top: 20px;
+        display: none;
+    }
+    .fullPage{
+        padding-bottom: 300px;
+    }
+</style>
+<script>
+    $('h2').click(function(){
+        $(this).next('p').toggle();
+    });
+    // $(window).scroll(function() { //when window is scrolled
+    //     $('h2').each(function() {
+    //         console.log($(this).offset().top / $(window).scrollTop()) / 100;
+    //         $(this).css('opacity', ($(this).offset().top - $(window).scrollTop()) / 100 - 0.5);
+    //     })
+    // });
+    // $('h2').css('opacity', 0.2);
+</script>
+<%- include('footer') %>

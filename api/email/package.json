@@ -1,0 +1,28 @@
+{
+  "name": "email",
+  "version": "1.0.0",
+  "description": "The Sweater Guys API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweaterguys/thesweaterguys.com.git"
+  },
+  "keywords": [
+    "sweater"
+  ],
+  "author": "Dexter Storey <dexter@thesweaterguys.com> (https://thesweaterguys.com/api)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sweaterguys/thesweaterguys.com/issues"
+  },
+  "homepage": "https://github.com/sweaterguys/thesweaterguys.com#readme",
+  "dependencies": {
+    "nodemailer": "^4.6.7",
+    "@slack/client": "^4.4.0",
+    "twilio": "^3.19.1",
+    "googleapis": "^27.0.0"
+  }
+}

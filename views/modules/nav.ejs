@@ -1,0 +1,35 @@
+<nav>
+    <div class="menu">
+        <a id="HOME" href="/">The Sweater Guys</a>
+        <a href="/Cart" id="cart_val"><i class="fas fa-shopping-cart"></i> <%=cart%></a>
+        <a href="/Contact">Contact</a>
+        <a href="/About">About Us</a>
+        <a href="/Design">Design Studio</a>
+    </div>
+    <div id="hamburger" onclick="toggleHamburger(this)">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="dropdown">
+        <div class="dropdown-content">
+            <a href="/">The Sweater Guys</a>
+            <a href="/design">Design Studio</a>
+            <a href="/about">About Us</a>
+            <a href="/contact">Contact</a>
+            <a href="/cart" id="cart_val"><i class="fas fa-shopping-cart"></i> <%= cart %></a>
+        </div>
+    </div>
+</nav>
+<script>
+    function toggleHamburger(e){
+    $('#hamburger').toggleClass('openSesame');
+    $('.dropdown').toggle();
+    }
+    $('.dropbtn').mouseenter(function(){
+        $('.dropME').toggle();
+    }).click(function(e){
+        e.preventDefault();
+        $('.dropME').toggle();
+    })
+</script>
