@@ -1,560 +1,280 @@
-//*
-//  padding 0
-//  margin 0
-body
-  font-family Helvetica
-nav
-  z-index 1
-  position fixed
-  height 50px
-  width 100%
-.fullPage
-  height 100vh
-  overflow auto
-.content
-  position relative
-  height calc(100% - 50px)
-  top 50px
-.pe
-  pointer-events none
-
 @import 'modules/functions'
-@import 'modules/animations'
-@font-face
-  font-family Lato
-  src url(../webfonts/Lato-Hairline.ttf)
+@import 'pages/product'
 // vars
 selected_color = rgba(0, 0, 0, 0.5)
 selecting_color = alpha(light, 0.5)
 primary_color = #1b75bc
 secondary_color = #2d95bc
-dark = #0A0A0A
-light = #f5f5f5
-dark_alpha = rgba(0,0,0,0.5)
+light_color = deepskyblue
+lighter_color = skyblue
+//primary_color = hotpink
+//secondary_color = deeppink
+//light_color = hotpink
+//lighter_color = deeppink
 
 primary_font = Helvetica, sans-serif
 tertiary_font = Lato
 light_font = Lato
-
-
-html
-  background white
-  ::-webkit-scrollbar
-    width 0
-  padding 0
-  ::-webkit-inner-spin-button
-    -webkit-appearance: none
 *
-  font-family primary_font
+  font-family Helvetica
   list-style-type none
   text-decoration none
   margin 0
-  padding 0
-  box-sizing border-box
-h1
-  font(primary_font, light, 40px, bold, 0, inherit)
-h2
-  font(primary_font, light, 20px, normal, 0, inherit)
-h3
-  font(primary_font, light, 15px, lighter, 0, inherit)
-a
-  color inherit
-.caps {
-  text-transform:capitalize;
-}
 input
   &:focus
     outline none
-.page
-  size(100vw, 100vh, 0, 0)
-  position relative
-  size(100vw, 100vh, 0, 0)
-  overflow hidden
-.content
-  top: 80px
-  padding 50px
-  height calc(100vh - 80px)
-.btn
-  background-color primary_color
-  color white
-  padding 12px
-  margin 10px 0
-  border none
-  width 100%
-  border-radius 3px
-  cursor pointer
-  font-size 25px
-  &:hover
-    background-color white
-    color deepskyblue
-//Index
-#load
+a
+  color inherit
+html
+  ::-webkit-scrollbar
+    width 0
+html, body
+  height 100%
+  margin 0
+nav
   position fixed
-  background primary_color
-  z-index 2
-  text-align center
-  .centered_block
-    position relative
-    top calc(50% - 10vw)
-    width 100%
-    height 20vw
-    h1
-      text-align center
-      line-height 0
-    p
-      font(tertiary_font, light, 20vw, 100, normal, center)
-#index_1
+  top 0
+  height 50px
+  width 100%
+  z-index 1
+  background light_color
+  color white
+  font-size 16px
+  .menu
+    #HOME
+      float left
+      font-weight bold
+      font-size 25px
+    a
+      line-height 50px
+      padding 0 10px
+      float right
+      &:hover
+        background white
+        color deepskyblue
+.page
+  min-height 100%
+  margin-top 50px
+
+#index
   height 100vh
-  background gradient(secondary_color, primary_color)
-  .contents
-    margin-top 80px
-  .grid
-    height 100%
-    display grid
-    grid-template-columns auto auto auto
-  .grid > div
-    position relative
-    border 1px solid white
-  .textbox
-    text-align center
-  .item_grid
-    position absolute
-    top 0
-  placehold(alpha(light, 0.2))
+  overflow hidden
+  background gradient(primary_color, secondary_color)
+  placehold(rgba(255,255,255,0.2))
   #TypeName
     color white
     font-weight bold
     text-align center
     size(300px, 50px, 30px, 0)
-    pos(absolute, calc(50% - 35px), calc(50% - 160px), calc(50% - 35px), calc(50% - 160px), 300px, 50px)
+    pos(absolute, calc(50% - 35px), calc(50% - 160px), calc(50% - 35px), calc(50% - 160px), 300px, 10px)
     border 2px white solid
     font-size 30px
     background rgba(0,0,0,0.5)
-//header
-nav
-  //opacity 0
-  z-index 1
-  top 0
-  background alpha(dark, 0.8)
-  size(100%, 80px, i, i)
-  position fixed
-  font(primary_font, light, 15px, light2, 0.1em, i)
-  .menu
-    #HOME
-      float left
-      font(primary_font, light, 30px, bold, normal, i)
-    a
-      line-height 80px
-      padding 0 20px 0 20px
-      float right
-      &:not(first-child)
-        breakpoint(750px, none)
-      &:hover
-        background alpha(dark, 0.5)
-  #hamburger
-    size(85px, 80px, 20px 25px, 0)
-    float right
-    display none
-    breakpoint(750px, block)
-    transition all .2s ease-in-out
+@import 'modules/grid'
+footer
+  color white
+  text-align center
+  .fab
+    padding 10px
+    font-size 30px
     &:hover
-      transform: scale(1.1)
+      color deepskyblue
+  #footer
+    background lighter_color
+    height 160px
     div
-      position relative
-      transition all .2s ease-in-out
-      size(35px, 5px, 0, 6px 0, i)
-      background white
-    &hover
-      background alpha(dark, 0.5)
-  .dropdown
-    display none
-    background alpha(dark, 0.8)
-    size(100%, 230px, 0, 0)
-    position absolute
-    top 80px
-    .dropdown-content
-      position relative
-      top -70px
-    font(primary_font, h1_light, 20px, bold, normal, center)
-    a
-      size(100vw, 60px, 0, 0)
-      line-height 60px
+      padding 50px 0 0 0
+      width calc(100% / 3)
       float left
-      &hover
-        background alpha(dark, 0.5)
-      &:first-child
-        font-size 30px
-
-#designStudio
-  background deepskyblue
-  h1
-    color white
-    font-size 8vw
-    text-align center
-  h2
-    text-align center
+  #footer_links
+    font-weight lighter
     padding 20px 0
-    font-size 4vw
-  .step
-    width 50%
-    //height 100vw
-    float left
-    padding 20px
-  .Num
-    width 20%
-    float left
     h1
-      font-size 10vw
-      line-height 9vw
-  .text
-    width 100%
-    img
+      margin -15px 0 15px 0
+    p
+      margin 10px 0 0 0
+  @media (max-width 1150px)
+    h1
+      font-size 40px
+    .fab
+      padding 0 10px
+    p, #footer_contact
+      display none
+    #footer
+      height 180px
+      div
+        width 100%
+        padding 30px 0 0 0
+  #footer_contact
+    a
       width 100%
+      line-height 22px
+  #footer_love
+    background light_color
+    line-height 50px
+    width 100%
+    height 50px
+
+//Design
+#welcome
+  font-size 50px
+#design_studio
   a
-    width calc(25% - 10px)
+    width calc(33.3% - 10px)
     text-align center
     float left
+    background deepskyblue
     padding 20px
-    background rgba(255,255,255,0.4)
+    margin 5px
     border-radius 5px
-    margin 20vw 5px
     color white
     font-size: 4vw
     font-weight bold
     &:hover
-      background rgba(0,0,0,0.3)
-#terminal
-  h1, h2
-    text-align center
-  background gradient(primary_color, secondary_color)
-  background-size 100% 600%
-  animation(gradients, 1s, infinite)
-  color light
-  form
-    float left
-    size(calc(100% - 20px), normal, 0, 10px)
-  .grid > div
-    height 200px
-  overflow auto
-#product
-  #saveME
-    padding 10px
-    border-radius 5px
-    border none
-    font-size 20px
-    position relative
-    width 100%
-    background white
-    color deepskyblue
-    &:hover
-      background deeppink
-      color white
-  color white
-  background gradient(skyblue, deepskyblue)
-  #cart
-    width 100px
-    height 2em
-    margin 10px 0
-    padding 12px
-    border none
-    border-radius 3px
-    font-size 20px
-  table
-    width 100%;
-    td
-      width 100%
-  .fifty
-    width calc(50% - 40px)
-    margin 20px
-    float left
-    overflow: auto
-  .design_options
-    left 50%
-  .color_selector, .size_selector
-    margin 5px 0
-    overflow auto
-    padding 10px 0
-  .color_selector > div, .size_selector > div
-    width 50px
-    background rgba(255,255,255,0.2)
-    height 50px
-    float left
-    border-radius 5px
-    box-shadow 5px 5px 10px rgba(0,0,0,0.1)
-    color white
-    margin 5px
-    font(secondary-font, alpha(light, 0.8), 35px, normal, -0.03em, center)
-    cursor default
-    p
-      line-height 50px
-  .color_selector > div
-    font-size 0
-  #uploadBox
-    width: 18vw;
-    height: 18vw;
-    left: 18%;
-    top: 20vw;
-    position: absolute;
-  #dragMeDaddy
-    left: 18%;
-    top: 20vw;
-    position absolute
-  #upload
-    position relative
-    height 100%
-    border 6px dashed #fff
-    opacity 0.8
-    boxSizing()
-  #upload svg
-    pos(absolute, 15%, 15%, 15%, 15%, 70%, 70%)
-    fill white
-  #upload input
-    pos(absolute, 0, 0, 0, 0, 100%, 100%)
-    opacity 0
-    font-size 15px
-    width 100%
-    height 100%
-    margin 10px 0
-    padding 12px
-    border none
-    border-radius 3px
-  @media (max-width: 800px)
-    .fifty
-      width calc(100% - 40px)
-    #uploadBox
-      width: 32vw;
-      height: 32vw;
-      left: 34%;
-      top: 35vw;
-      position: absolute;
-    #dragMeDaddy
-      width: 32vw;
-      height: 32vw;
-      left: 34%;
-      top: 35vw;
-      position: absolute;
-#designer:hover
-  #dragMeDaddy
-    border 6px dashed deepskyblue
-.arrow
-  border solid white
-  border-width 0 6px 6px 0
-  display inline-block
-  padding 6px
-#right
-  transform rotate(-45deg)
-  -webkit-transform rotate(-45deg)
-  position absolute
-  bottom 50%
-  right 0
-#corner
-  position absolute
-  bottom 0
-  right 0
-#down
-  transform rotate(45deg)
-  -webkit-transform rotate(45deg)
-  position absolute
-  bottom 0
-  right 50%
-.right
-  right -5px
-  bottom 50%
-.corner
-  right -5px
-  bottom -5px
-.bottom
-  right 50%
-  bottom -5px
-#contact
-  h1
-    font-size 10vw
-    text-align center
-  .btn
-    background primary_color
-  input, textarea
-    color white
-  color white
-  background deepskyblue
-  placehold(alpha(light, 0.2))
-#success
-  h1
-    font-size 10vw
+      background skyblue
+  background white
+  padding 50px
   h2
-    font-size 5vw
-    font-weight bold
-  p
-    font-size 3vw
-  text-align center
-  background deepskyblue
-  color white
-  .container
-    position absolute
-    top 45%
-    left 50%
-    transform translate(-50%, -50%);
-#about
-  background deepskyblue
-// footer
-#footer
-  color alpha(light, 0.5)
-  background-color: #353A3F;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  .footer2
-    padding 30px 50px
-  .footer3
-    color alpha(light, 0.4)
+    color deepskyblue
     text-align center
-    background-color: #222529;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    width: 100%;
-    padding: 30px 50px;
-  .footer-left, .footer-center, .footer-right
-    display: inline-block;
-    vertical-align: top;
-    width: 25%;
-  .footer-links
-    margin: 20px 0 12px;
-    padding: 0;
-    a
-      display:inline-block;
-      line-height: 1.8;
-      text-decoration: none;
-      color: inherit;
-  .footer-company-name
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0;
-  .footer-center
-    text-align center
-    width: 49%;
-  .footer-left
-    text-align center
-  .footer-right
-    text-align center
-  .footer-company-about
-    line-height: 20px;
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0;
-    span
-      display: block;
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 20px;
-  .footer-icons
-    margin-top: 25px;
-    a
-      display: inline-block;
-      width: 35px;
-      height: 35px;
-      cursor: pointer;
-      background-color:  #33383b;
-      border-radius: 2px;
-      font-size: 20px;
-      text-align: center;
-      line-height: 35px;
-      margin-right: 3px;
-      margin-bottom: 5px;
-@media (max-width: 1000px)
-  #footer
-    h1
-      text-align center
-    .footer-left, .footer-center, .footer-right,
-    text-align center
-      display: block;
-      width: 100%;
-      margin-bottom: 40px;
-    .footer-center
-      i
-        margin-left: 0;
-      div a
-        display inline-block
-      p
-        display none
-.modal-window {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.9);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.modal-window:target {
-  opacity: 1;
-  pointer-events: auto;
-}
-.modal-window>div
-  width: 340px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 3.5em;
-  background: #DDD;
-  color: black;
-  text-align center
-  border-radius 10px
-  .fa-times-circle
-    font-size 20px
-  .twofer
-    width calc(50% - 5px)
-    float left
-  #righter
-    margin-right 10px
-  input
-    font-size 20px
-    height 2em
-    line-height 1em
-.modal-close {
-  color: #aaa;
-  line-height: 50px;
-  font-size: 80%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 40px;
-  text-decoration: none;
-}
-.modal-close:hover {
-  color: #000;
-}
-.modal-window header {
-  font-weight: bold;
-}
-.modal-window h1 {
-  font-size: 150%;
-  margin: 0 0 15px;
-  color: white;
-}
-#card_icons
-  width 100%
-  i
-    color black
-    width 23%
     font-size 50px
+  h1
+    color deepskyblue
     text-align center
-#confirmPurchase
-  font-size 20px
-  height 2em
-  line-height 0.7em
-  margin-bottom 20px
-  &:hover
-    background #1b75bc
-    color white
-#drag
-  position absolute
-.move
-  cursor move
-@import 'modules/form'
-@import 'modules/grid'
+    margin 0 0 20px 0
+//Hoodie SVG
+#sweater
+  width 50%
+  float left
+#sweater_base
+  fill deepskyblue
+  //animation-name: rainbow;
+  //animation-duration: 10s;
+  //animation-iteration-count: infinite;
+#color
+  width 40%
+  margin 0, 5%
+  float left
+@keyframes rainbow
+  0%
+    fill deepskyblue
+  50%
+    fill deeppink
+  100%
+    fill deepskyblue
+//Animation DStudio
+#design_header
+  fill deepskyblue
+  margin 20px 0
+#D_drill{
+  animation-name: drill;
+  animation-duration: 0.01s;
+  animation-iteration-count: infinite;
+}
+#D{
+  animation-name: D;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+}
+#e3, #e2{
+  animation-name: fade-in-right;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#e1{
+  animation-name: fade-in-left;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#i_wrench{
+  animation-name: i_wrench;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#t_hammer
+{
+  animation-name: t_hammer;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+#o_gear{
+  animation-name: o_gear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes drill {
+  from {transform: translateX(0px);}
+  to {transform: translateX(4px);}
+}
+@keyframes D {
+  0% {transform: scaleX(0.98);}
+  50% {transform: scaleX(1);}
+  100% {transform: scaleX(0.98);}
+}
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+}
+@keyframes i_wrench{
+  0% {
+    transform-origin: 35% 80%;
+    transform:rotate(10deg);
+  }
+  50% {
+    transform-origin: 35% 80%;
+    transform:rotate(-10deg);
+  }
+  100% {
+    transform-origin: 35% 80%;
+    transform:rotate(10deg);
+  }
+}
+@keyframes t_hammer{
+  0% {
+    transform-origin: 70% 80%;
+    transform:rotate(0deg);
+  }
+  90% {
+    transform-origin: 70% 80%;
+    transform:rotate(-10deg);
+  }
+  100% {
+    transform-origin: 70% 80%;
+    transform:rotate(0deg);
+  }
+}
+@keyframes o_gear{
+  0% {
+    transform-origin: 95.3% 45%;
+    transform:rotate(0deg);
+  }
+  100% {
+    transform-origin: 95.3% 45%;
+    transform:rotate(360deg);
+  }
+}

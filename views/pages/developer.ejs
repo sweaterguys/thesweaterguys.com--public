@@ -1,0 +1,13 @@
+<%- include('header') %>
+<%- include('nav') %>
+<link rel="stylesheet" href="css/modules/github-markdown.css">
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/mono-blue.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<div class="fullPage" id="markdown">
+    <article class="markdown-body">
+        <%- markdown %>
+    </article>
+</div>
+<%- include('footer') %>

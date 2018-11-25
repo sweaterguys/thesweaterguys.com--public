@@ -102,6 +102,7 @@
 
     let SIZE, COLOR, QUANTITY, avail_stock;
     $('#designOptions').submit(function(e){
+        e.preventDefault();
         if ($('#logo').val() && $('#color').val() && $('#size').val() && $('#cart').val()) {
             if (checkQuantity(SIZE, COLOR, $('#cart').val())){
                 $.ajax({
@@ -112,11 +113,10 @@
                         $('#cart_val').html('<i class="fas fa-shopping-cart"></i>' + data).css('color', 'red')
                     }
             })
-        } else{
-            alert('Please pick your color, choose your size and upload a logo!');
         }
-        e.preventDefault();
-    }});
+    } else{
+            alert('Please pick your color, choose your size and upload a logo!');
+        }});
     $('.selector').click(function(){
         $('#niceColor').val(COLOR);
         if (SIZE && COLOR){

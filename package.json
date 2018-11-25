@@ -17,6 +17,7 @@
     "auth": "file:api/auth",
     "cart": "file:api/cart",
     "cookie-parser": "~1.4.3",
+    "credentials": "file:private/credentials",
     "debug": "~2.6.9",
     "dotenv": "^6.1.0",
     "ejs": "~2.5.7",
@@ -29,12 +30,12 @@
     "pay": "file:api/pay",
     "read-chunk": "^3.0.0",
     "ship": "file:api/ship",
+    "showdown": "^1.9.0",
     "slack": "file:api/slack",
     "sms": "file:api/sms",
     "stock": "file:api/stock",
     "stylus": "^0.54.5",
-    "upload": "file:api/upload",
-    "credentials": "file:private/credentials"
+    "upload": "file:api/upload"
   },
   "devDependencies": {
     "nodemon": "latest"

@@ -1,4 +1,4 @@
-# [TheSweaterGuys.com](https://github.com/sweaterguys/thesweaterguys.com)
+# [TheSweaterGuys.com](https://thesweaterguys.com)
 ![banner image](public/img/admin/banner.jpg?raw=true)
 Welcome to **The Sweater Guys Website!** Check out this repo for all the necessary steps for implementation and deployment
 
@@ -159,7 +159,7 @@ The library returns an SVG mockup and then saves it to our public drive as a PNG
 
 Due to the synchronicity dependent nature of file uploading, this api (as well as most others in the lib) is built with [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 ```javascript
-(...perams) => new Promise((resolve) => {...}).then((buffer) => resolve(base64(buffer)))
+(...perams) => new Promise((resolve) => {"..."}).then((buffer) => {resolve(base64(buffer)))
 ```
 if you don't understand that^ code: read [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) and [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and [this](https://nodejs.org/api/buffer.html)
 

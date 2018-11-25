@@ -28,6 +28,7 @@ routes = {
     cart: './routes/cart',
     contact: './routes/contact',
     design: './routes/design',
+    developer: './routes/developer',
     hoodie: './routes/product',
     crew: './routes/product',
     quarter: './routes/product',

@@ -1,7 +1,8 @@
 .item_grid {
   width: 100%;
-  height: 120%;
+  height: 110%;
   overflow: hidden;
+  margin-top: 80px;
 /* ---- MOBILE GRID ---- */
 }
 .item_grid > div {
@@ -14,12 +15,14 @@
 .item_grid > div > div > div > div {
   float: left;
 }
-.item_grid img {
+.item_grid img,
+.item_grid svg {
   transition: all 0.2s ease-in-out;
-  max-height: 105%;
+  max-height: 100%;
   max-width: 110%;
 }
-.item_grid img:hover {
+.item_grid img:hover,
+.item_grid svg:hover {
   transform: scale(1.1);
 }
 .item_grid .oflowR img,
@@ -70,21 +73,21 @@
 .item_grid .h1 {
   height: calc(100% / 6 * 1);
 }
-@media only screen and (max-width: 900px) {
-  .item_grid .item_grid {
+@media (max-width: 900px) {
+  .item_grid {
     width: 105vw;
     margin-left: -5%;
   }
-  .item_grid .item_grid > div {
+  .item_grid > div {
     width: 50%;
     height: calc(100% / 3);
     float: left;
   }
-  .item_grid .oflowR img {
+  .oflowR img {
     float: right;
   }
-  .item_grid .oflowR_SPECIAL,
-  .item_grid .oflowL_SPECIAL {
+  .oflowR_SPECIAL,
+  .oflowL_SPECIAL {
     float: left;
   }
 }
