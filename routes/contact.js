@@ -4,6 +4,9 @@ const cart = require('cart'),
 module.exports = require('express').Router()
     .get('/', (req, res) =>
         res.render('contact', { title: 'contact', cart: cart.get(req.cookies) }))
+    .get('/unsubscribe', (req, res) =>
+        res.send(email.blacklist(req.query.email))
+    )
     .post('/', (req, res) => {
         res.render('success', { title: 'Success', cart: cart.get(req.cookies) });
         email.send({

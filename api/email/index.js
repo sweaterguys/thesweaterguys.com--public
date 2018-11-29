@@ -2,7 +2,8 @@
 
 const credentials = require('credentials'),
     {google} = require('googleapis'),
-    ejs = require('ejs');
+    ejs = require('ejs'),
+    fs = require('fs');
 
 authorize = new Promise(resolve => {
     const oAuth2Client = new google.auth.OAuth2(
@@ -16,7 +17,6 @@ authorize = new Promise(resolve => {
  takes object:
 
  to: recipient email address
- from: sender email address
  contact: recipient first and last name
  subject: email subject
  body:{
@@ -44,7 +44,7 @@ module.exports = {
                                 "MIME-Version: 1.0\n",
                                 "Content-Transfer-Encoding: 7bit\n",
                                 "to: ", data.to, "\n",
-                                "from: ", data.from, "\n",
+                                "from: ", "talk@thesweaterguys.com", "\n",
                                 "subject: ", data.subject, "\n\n",
                                 str
                             ].join('')).toString("base64").replace(/\+/g, '-').replace(/\//g, '_')
@@ -53,5 +53,12 @@ module.exports = {
                 });
             })
         })
+    },
+    blacklist: (id) =>{
+        fs.appendFile(__dirname + '/blacklist.json', ", "+ String(id) , function (err) {
+            if (err) throw err;
+            console.log('The "data to append" was appended to file!');
+        });
+        return('thanks!');
     }
 };
