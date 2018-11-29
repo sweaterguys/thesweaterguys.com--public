@@ -12,13 +12,29 @@ authorize = new Promise(resolve => {
     oAuth2Client.setCredentials(credentials.gmail_token);
     resolve(oAuth2Client);
 });
+ /*
+ takes object:
 
+ to: recipient email address
+ from: sender email address
+ contact: recipient first and last name
+ subject: email subject
+ body:{
+    message: message content
+    preheader: content preview (displayed beside subject line)
+    contact: first name of recipient
+    images: [image0, image1, ...]
+ }
+template: basic, etc.
+
+ */
 module.exports = {
     send: (data) => {
         return new Promise(resolve=>{
             authorize.then(auth => {
+                if (!('template' in data)) data.template = 'basic';
                 const gmail = google.gmail({version: 'v1', auth});
-                ejs.renderFile(__dirname + '/email/templates/' + data.template, {body: data.body}, function(err, str){
+                ejs.renderFile(__dirname + '/templates/' + data.template +'.ejs', {body: data.body}, function(err, str){
                     gmail.users.messages.send({
                         auth: auth,
                         userId: 'me',

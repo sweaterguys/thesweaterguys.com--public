@@ -80,10 +80,41 @@ module.exports = require('express').Router()
                 console.log({"1a394191-24d5-4922-83bd-f31f39610f4b": itemsToBuy});
                 console.log(trackingLabel);
                 // res.send(result[1] + trackingLabel);
-                email.send(shipping['email'], 'The Sweater Guys Receipt', email.htmlEmail(shipping['name'], shipping['speed'], trackingLabel, JSON.stringify(images)));
-                slack.send('New Client!' +'\n' + 'Shipping: ' + JSON.stringify(shipping) + '\n' + 'images: ' + JSON.stringify(images) + 'cart: ' + JSON.stringify(cart));
-                sms.send('New Message from The Sweater Guys: Thanks for your order! check your email for your tracking number!', shipping['phone']);
-                sms.send('New Client!', 4168226761);
+                email.send({
+                    from: 'Sweater Guy',
+                    to: shipping['email'],
+                    subject: 'The Sweater Guys Receipt',
+                    body: {
+                        message: "Thanks so much for your order! We'll be in touch!",
+                        preheader: 'Thank You!',
+                        contact: shipping['name'].split(' ')[0]
+                    },
+                    template: 'basic'
+                });
+                email.send({
+                    from: 'Sweater Guy',
+                    to: 'talk@thesweaterguys.com',
+                    subject: 'New Order',
+                    body: {
+                        message: 'New Client!' +'\n' + 'CART: ' + JSON.stringify(cart) +'\n' + 'Shipping: ' + JSON.stringify(shipping),
+                        preheader: 'order',
+                        contact: 'Sweater'
+                    },
+                    template: 'basic'
+                });
+                slack.send({
+                    channel: 'orders',
+                    images: images,
+                    message: 'New Client!' +'\n' + 'CART: ' + JSON.stringify(cart) +'\n' + 'Shipping: ' + JSON.stringify(shipping)
+                });
+                sms.send({
+                    message: 'New Message from The Sweater Guys: Thanks for your order! check your email for your tracking number!',
+                    number: shipping['phone']
+                });
+                sms.send({
+                    message: 'New Client!',
+                    number: 4168226761
+                });
                 stock.order(itemsToBuy);
             }else{
                 res.redirect('/error?error='+result[1]);
