@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>The Sweater Guys</title>
+    <style>
+        img {
+            border: none;
+            -ms-interpolation-mode: bicubic;
+            max-width: 100%;
+        }
+        body {
+            color: white;
+            background-color: skyblue;
+            font-family: sans-serif;
+            -webkit-font-smoothing: antialiased;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        table {
+            color: white;
+            border-collapse: separate;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            width: 100%; }
+        table td {
+            font-family: sans-serif;
+            font-size: 14px;
+            vertical-align: top;
+        }
+        /* -------------------------------------
+            BODY & CONTAINER
+        ------------------------------------- */
+        .body {
+            color: white;
+            background-color: skyblue;
+            width: 100%;
+        }
+        /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+        .container {
+            color: white;
+            display: block;
+            Margin: 0 auto !important;
+            /* makes it centered */
+            max-width: 580px;
+            padding: 10px;
+            width: 580px;
+        }
+        /* This should also be a block element, so that it will fill 100% of the .container */
+        .content {
+            color: white;
+            box-sizing: border-box;
+            display: block;
+            Margin: 0 auto;
+            max-width: 580px;
+            padding: 10px;
+        }
+        /* -------------------------------------
+            HEADER, FOOTER, MAIN
+        ------------------------------------- */
+        .main {
+            color: white;
+            background: deepskyblue;
+            border-radius: 3px;
+            width: 100%;
+        }
+        .wrapper {
+            color: white;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .content-block {
+            color: white;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .footer {
+            clear: both;
+            Margin-top: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        .footer td,
+        .footer p,
+        .footer span,
+        .footer a {
+            color: white;
+            font-size: 12px;
+            text-align: center;
+        }
+        .preHeader {
+            color: transparent;
+            display: none;
+            height: 0;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            mso-hide: all;
+            visibility: hidden;
+            width: 0;
+        }
+        #contact{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #banner{
+        }
+        #banner p{
+            height: 100px;
+            font-size: 5vw;
+            text-align: center;
+            font-weight: bold;
+        }
+        #snow{
+            position: absolute;
+            pointer-events: none;
+            height: 100vh;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+<img id="snow" src="snow.gif">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" class="header">
+    <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+        <td class="container" id="banner">
+            <p>Happy Holidays Dexter!</p>
+        </td>
+        </td>
+    </tr>
+</table>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+    <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+            <div class="content">
+
+                <!-- START CENTERED WHITE CONTAINER -->
+                <span class="preHeader">Happy Holidays!</span>
+                <table role="presentation" class="main">
+
+                    <!-- START MAIN CONTENT AREA -->
+                    <tr>
+                        <td class="wrapper">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <p id="contact" >Hi Dexter,</p>
+                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    My Name is Dexter Storey, I'm CXO (Experience Director) at The Sweater Guys!
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    I'm reaching out to you today because I want to
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="1.png" alt="image">
+                                                </td>
+                                                <td>
+                                                    <img src="2.png" alt="image">
+                                                </td>
+                                                <td>
+                                                    <img src="3.png" alt="image">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- END MAIN CONTENT AREA -->
+                </table>
+
+                <!-- START FOOTER -->
+                <div class="footer">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="content-block">
+                                <span class="apple-link">The Sweater Guys inc.</span>
+                                <!--<br> Don't like these emails? <a href="https://thesweaterguys/contact/unsubscribe?email=">Unsubscribe</a>.-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="content-block powered-by">
+                                Made with love in Montreal by <a href="https://thesweaterguys.com">The Sweater Guys</a>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="content-block">
+                                Hate puppies? <a href="http://localhost:3000/contact/unsubscribe?email=<%= body.email %>">Unsubscribe</a> pussy
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- END FOOTER -->
+
+                <!-- END CENTERED WHITE CONTAINER -->
+            </div>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon start",
+    "dev": "chmod +x bash/dev.sh && ./bash/dev.sh",
     "deploy": "chmod +x bash/deploy.sh && ./bash/deploy.sh",
     "git": "chmod +x bash/git.sh && ./bash/git.sh"
   },
@@ -35,7 +35,8 @@
     "sms": "file:api/sms",
     "stock": "file:api/stock",
     "stylus": "^0.54.5",
-    "upload": "file:api/upload"
+    "upload": "file:api/upload",
+    "xmldom": "^0.1.27"
   },
   "devDependencies": {
     "nodemon": "latest"

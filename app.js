@@ -1,3 +1,5 @@
+console.log(`Welcome to the ${process.env.NODE_ENV} environment`);
+
 // declare dependencies
 const
     express = require('express'),
@@ -29,6 +31,7 @@ routes = {
     contact: './routes/contact',
     design: './routes/design',
     developer: './routes/developer',
+    error: './routes/error',
     hoodie: './routes/product',
     crew: './routes/product',
     quarter: './routes/product',

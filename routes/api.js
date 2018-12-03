@@ -3,7 +3,8 @@ const Multer = require('multer'),
 
 
 const sms = require('sms'), email = require('email'), slack = require('slack'), mockup = require('mockup'),
-    upload = require('upload'), cart = require('cart'), pay = require('pay'), auth = require('auth');
+    upload = require('upload'), cart = require('cart'), pay = require('pay'), auth = require('auth'),
+    ship = require('ship');
 
 module.exports = require('express').Router()
     .get('/', (req, res) =>
@@ -28,11 +29,14 @@ module.exports = require('express').Router()
         res.render('../../api/email/templates/'+ req.body.template +'.ejs', {body: req.body.body})
     )
     .post('/upload', multer.single('file'), (req, res) =>
-        upload(req.file).then(file => res.send(file))
+        upload.image(req.file).then(file => res.send(file))
     )
     .post('/mockup', (req, res) =>
-        mockup(req.body).then(mockup=>res.send(mockup))
+        mockup.api(req.body).then(mockup=>res.send(mockup))
     )
     .post('/pay', (req, res) =>
         pay(req.body).then(status => res.send(status))
+    )
+    .post('/ship', auth, (req, res) =>
+        ship(req.body).then(status => res.send(status))
     );

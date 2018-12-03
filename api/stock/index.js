@@ -12,11 +12,14 @@ module.exports = {
         })
     }),
     order: (itemsToBuy) => new Promise(resolve =>{
-        console.log(itemsToBuy);
         request.post({
-            headers: {'content-type' : 'application/json'},
+            headers: {
+                'env' : process.env.NODE_ENV,
+                'content-type' : 'application/json',
+                'Authorization' : 'Basic ' + Buffer.from(credentials.auth).toString("base64")
+            },
             url:     process.env.STOCK_URI,
-            body:    JSON.stringify(credentials.stock +':'+ itemsToBuy)
+            body:    JSON.stringify(itemsToBuy)
         }, function(error, response, body){
             resolve(body);
         })

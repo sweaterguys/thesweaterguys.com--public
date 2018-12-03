@@ -3,8 +3,9 @@
 const request = require('request'),
     credentials = require('credentials');
 module.exports = pay = (billing) => {
-    const constants = credentials.bluepay;
-    let allData = Object.assign({}, constants, billing);
+    let blue = credentials.bluepay;
+    if (process.env.NODE_ENV === 'development') blue = credentials.bluepay_test;
+    let allData = Object.assign({}, blue, billing);
     function serialize(obj) {
         let str = [];
         for (let p in obj)
@@ -29,7 +30,7 @@ module.exports = pay = (billing) => {
                 result[pair[0]] = decodeURIComponent(pair[1] || '');
             });
             let d = JSON.parse(JSON.stringify(result));
-            console.log(d);
+            // console.log(d);
             if (d.Result === "APPROVED") {
                 resolve([true, d.AMOUNT + ", " + d.INVOICE_ID + ", " + d.MESSAGE + ", Shipping Label: "]);
             } else {

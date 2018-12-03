@@ -8,6 +8,7 @@ module.exports = require('express').Router()
             totalPrice = 0;
         if (req.cookies["cart"]){
             lineItems = req.cookies["cart"];
+            console.log(lineItems);
             lineItems.forEach(function(item) {
                 item.svg = mockup.svg(item.product, '', item.color, item.logo, item.x, item.y, item.width, item.height);
                 totalPrice += item.price * item.quantity;
@@ -17,7 +18,6 @@ module.exports = require('express').Router()
         res.render('cart', { title: 'Cart', cart: cart.get(req.cookies), lineItems: lineItems, subtotal: totalPrice});
     })
     .post('/', (req, res) => {
-        console.log(req.body);
         let lineItems = req.body;
         lineItems.taxRate = 15;
         if (Object.keys(discount).includes(lineItems.discountCode))
