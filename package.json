@@ -6,6 +6,7 @@
     "start": "node ./bin/www",
     "dev": "chmod +x bash/dev.sh && ./bash/dev.sh",
     "deploy": "chmod +x bash/deploy.sh && ./bash/deploy.sh",
+    "server": "chmod +x bash/server.sh && ./bash/server.sh",
     "git": "chmod +x bash/git.sh && ./bash/git.sh"
   },
   "repository": {
