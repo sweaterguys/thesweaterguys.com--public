@@ -21,14 +21,7 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
-// set up a route to redirect http to https
-if (process.env.NODE_ENV === 'production') {
-    http.get('*', function(req, res) {
-        if (!req.secure) {
-            res.redirect('https://thesweaterguys.com' + req.url);
-        }
-    });
-}
+
 /**
  * Listen on provided port, on all network interfaces.
  */

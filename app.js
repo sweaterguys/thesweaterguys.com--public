@@ -6,6 +6,7 @@ const
     path = require('path'),
     app = express();
 require('dotenv').config({path: './private/.env'});
+
 // set views engine
 app.set('views', [
     path.join(__dirname, 'views'),
@@ -13,6 +14,7 @@ app.set('views', [
     path.join(__dirname, 'views/modules'),
     path.join(__dirname, 'views/admin')
 ]).set('view engine', 'ejs');
+
 // initialize dependencies
 app.use(
     express.json(),
@@ -22,6 +24,7 @@ app.use(
     require('morgan')('dev'),
     require('cookie-parser')()
 );
+
 // declare routes
 routes = {
     '': './routes/index',
@@ -40,10 +43,22 @@ routes = {
     success: './routes/success',
     terms: './routes/terms',
 };
+
+// set up a route to redirect http to https
+if (process.env.NODE_ENV === 'production') {
+    app.get('*', function(req, res) {
+        if (!req.secure) {
+            res.redirect('https://' + req.headers.host + req.url);
+        }
+    });
+}
+
 // set app.locals
 app.locals.svg = require('./public/data/svgPaths.json');
+
 // initialize routes
 for (let route in routes) app.use('/'+route, require(routes[route]))
+
 //catch errors
 app.use((req, res, next) => {
     let err = new Error('Not Found');
@@ -60,5 +75,6 @@ app.use((err, req, res) => {
         cart: 0
     });
 });
+
 //export app
 module.exports = app;
