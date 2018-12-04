@@ -24,7 +24,7 @@ var server = http.createServer(app);
 // set up a route to redirect http to https
 if (process.env.NODE_ENV === 'production') {
     http.get('*', function(req, res) {
-        res.redirect('https://' + req.headers.host + req.url);
+        res.redirect('https://thesweaterguys.com' + req.url);
     });
 }
 /**
