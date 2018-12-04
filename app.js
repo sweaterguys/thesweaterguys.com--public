@@ -44,14 +44,15 @@ routes = {
     terms: './routes/terms',
 };
 
-// // set up a route to redirect http to https
-// if (process.env.NODE_ENV === 'production') {
-//     app.get('*', function(req, res) {
-//         if (!req.secure) {
-//             res.redirect('https://' + req.headers.host + req.url);
-//         }
-//     });
-// }
+// set up a route to redirect http to https
+if (process.env.NODE_ENV === 'production') {
+    app.get('*', function(req, res, next) {
+        if(req.get('x-forwarded-proto') !== 'https'){
+            res.redirect('https://thesweaterguys.com' + req.url)
+        }
+        return next();
+    });
+}
 
 // set app.locals
 app.locals.svg = require('./public/data/svgPaths.json');
