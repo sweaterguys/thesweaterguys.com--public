@@ -6,10 +6,11 @@ const request = require('request'),
 
 module.exports = {
     get: (product) => new Promise(resolve => {
-        request.get(process.env.STOCK_URI, (err, res, body) => {
-            if (err || res.statusCode !== 200) resolve(JSON.stringify(default_stock[product]));
-            else resolve(JSON.stringify(JSON.parse(body)[product]))
-        })
+        // request.get(process.env.STOCK_URI, (err, res, body) => {
+        //     if (err || res.statusCode !== 200) resolve(JSON.stringify(default_stock[product]));
+        //     else resolve(JSON.stringify(JSON.parse(body)[product]))
+        // })
+        resolve(JSON.stringify(default_stock[product]))
     }),
     order: (itemsToBuy) => new Promise(resolve =>{
         request.post({

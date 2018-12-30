@@ -119,7 +119,7 @@ module.exports = require('express').Router()
                     slack.send({
                         channel: 'orders',
                         images: images,
-                        message: 'New Client!'
+                        message: 'New Client!' +'\n' + 'CART: ' + JSON.stringify(cart) +'\n' + 'Shipping: ' + JSON.stringify(shipping)
                     });
                     console.log("Sent Slack to: orders");
 

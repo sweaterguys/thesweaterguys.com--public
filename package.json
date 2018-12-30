@@ -20,7 +20,7 @@
     "cookie-parser": "~1.4.3",
     "credentials": "file:private/credentials",
     "debug": "~2.6.9",
-    "dotenv": "^6.1.0",
+    "dotenv": "^6.2.0",
     "ejs": "~2.5.7",
     "email": "file:api/email",
     "express": "~4.16.0",
